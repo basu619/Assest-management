@@ -3,8 +3,8 @@ import { Routes, RouterModule } from '@angular/router';
 import{SignINComponent} from './sign-in/sign-in.component';
 import{HomepageComponent} from './homepage/homepage.component';
 import{ForgotPasswordComponent} from './forgot-password/forgot-password.component';
-import{ResetPasswordComponent} from './reset-password/reset-password.component'
-
+import{ResetPasswordComponent} from './reset-password/reset-password.component';
+import{PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
 
 const routes: Routes = [
   {
@@ -33,11 +33,11 @@ const routes: Routes = [
     component: ResetPasswordComponent,
     data: { title: 'reset-password page : ' }
   },
-  /*{
+  {
     path: '**',
-    component: PageNotfoundComponent,
+    component: PagenotfoundComponent,
     data: { title: 'PageNotfoundComponent : ' }
-  }*/
+  }
 ];
 
 @NgModule({
