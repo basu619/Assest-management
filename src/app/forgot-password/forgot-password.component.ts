@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FieldsService } from '../fieldsservice.service';
+import { FieldsService } from '../fields.service';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
 import * as $ from "jquery";

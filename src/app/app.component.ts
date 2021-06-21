@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as $ from "jquery";
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Assest-management';
+
 }
+
+$(document).ready(function () {
+  console.log("App loaded...");
+
+
+});
+
+
+
+
+
+

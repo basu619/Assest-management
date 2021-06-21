@@ -1,26 +1,27 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import{SignINComponent} from './sign-in/sign-in.component';
-import{HomepageComponent} from './homepage/homepage.component';
-import{ForgotPasswordComponent} from './forgot-password/forgot-password.component';
-import{ResetPasswordComponent} from './reset-password/reset-password.component';
-import{PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
+import { PageNotfoundComponent } from './page-notfound/page-notfound.component';
+import { IndexPageComponent } from './index-page/index-page.component';
+import { LoginComponent } from './login/login.component';
+import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
+import { AuthGuard } from './auth.guard';
 
 const routes: Routes = [
   {
     path: '',
-    component: SignINComponent,
+    component: LoginComponent,
     data: { title: 'Admin Login : ' }
   },
   {
     path: 'login',
-    component: SignINComponent,
+    component: LoginComponent,
     data: { title: 'Admin Login : ' }
   },
   {
     path: 'home-page',
-    component: HomepageComponent,
-    /*canActivate : [AuthGuard],*/
+    component: IndexPageComponent,
+    canActivate : [AuthGuard],
     data: { title: 'Asset Management page : ' }
   },
   {
@@ -35,7 +36,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: PagenotfoundComponent,
+    component: PageNotfoundComponent,
     data: { title: 'PageNotfoundComponent : ' }
   }
 ];
